@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{--gold:#D4AF37;--bg:#141210;--bg2:#1c1916;--line:#35302a;--tx:#f6f1e9;--mu:#a69f94;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--ease:cubic-bezier(.22,.7,.2,1)}
 body.light{--gold:#9a6c07;--bg:#fbf8f3;--bg2:#f1ebe1;--line:#e2d8c9;--tx:#1a1612;--mu:#665e53}
 #hero,.cta .in,#mm{--gold:#D4AF37}
@@ -56,8 +56,8 @@ nav.stk .tg{border-color:var(--line);color:var(--tx)}.tg:hover{border-color:var(
 .ham.on span:nth-child(1){transform:translateY(10px) rotate(45deg)}.ham.on span:nth-child(2){opacity:0}.ham.on span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}
 
 /* MOBILE MENU */
-#mm{position:fixed;inset:0;z-index:49;background:rgba(13,11,9,.97);backdrop-filter:blur(16px);display:flex;flex-direction:column;justify-content:center;padding:100px 36px 40px;opacity:0;visibility:hidden;clip-path:circle(0 at calc(100% - 44px) 40px);transition:clip-path .7s var(--ease),opacity .4s,visibility .7s;color:#fff}
-#mm.on{opacity:1;visibility:visible;clip-path:circle(150% at calc(100% - 44px) 40px)}
+#mm{position:fixed;inset:0;z-index:49;background:#0d0b09;display:flex;flex-direction:column;justify-content:center;padding:100px 36px 40px;visibility:hidden;clip-path:circle(0 at calc(100% - 44px) 40px);-webkit-clip-path:circle(0 at calc(100% - 44px) 40px);transition:clip-path .6s var(--ease),-webkit-clip-path .6s var(--ease),visibility 0s .6s;will-change:clip-path;transform:translateZ(0);backface-visibility:hidden;color:#fff;overflow-y:auto}
+#mm.on{visibility:visible;clip-path:circle(150% at calc(100% - 44px) 40px);-webkit-clip-path:circle(150% at calc(100% - 44px) 40px);transition:clip-path .6s var(--ease),-webkit-clip-path .6s var(--ease),visibility 0s}
 #mm ul{list-style:none;display:grid;gap:4px;margin-bottom:34px}
 #mm li{opacity:0;transform:translateX(30px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
 #mm.on li,#mm.on .mc{opacity:1;transform:none}
